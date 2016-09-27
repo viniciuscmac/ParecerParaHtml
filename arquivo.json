@@ -1,9 +1,23 @@
 {
-	'parecer':
-		[
-			{'id': 12, 'nome': 'Joao', 'telefone': '(62) 9999-9999', 'cidade': 'Goiania'},
-			{'id': 13, 'nome': 'Maria', 'telefone': '(62) 8888-8888', 'cidade': 'Goias'},
-			{'id': 14, 'nome': 'Carlos', 'telefone': '(62) 7777-7777', 'cidade': 'Goiania'},
-			{'id': 15, 'nome': 'Vinicius', 'telefone': '(62) 6666-6666', 'cidade': 'Goiania'}
-		]
+	"id": "1",
+	"totalMeses": "Somatorio - Expressão: numeroMeses",
+	"meses24": "Expressão - Expressão: totalMeses = 24",
+	"somaPonderada": "Somatorio - Expressão: notaCad * numeroMeses",
+	"notaFinal": "Expressao - Expressão: somaPonderada / totalMeses",
+	"inciso1": "Expressao - Expressão: mediaEnsinoGraduacao >= 40",
+	"inciso2": "Expressao - Expressão: mediaEnsinoGraduacao >= 40",
+	"inciso3": "Expressao - Expressão: mediaProducaoIntelectual >= 20",
+	"inciso4": "Expressao - Expressão: mediaProducaoIntelectual >= 20",
+	"aprovadoChefia": "Expressao - Expressão: mediaProducaoIntelectual >= 20",
+	"inciso6": "Expressao - Expressão: notaFinal >= 7,5",
+	"habilitacaoParcial": "Expressao - Expressão: I & II & III & IV & V & VI",
+	"habilitacaoEstagio": "Expressao - Expressão: estagioPosdoutoralOuSenior ? III & V & VI : false",
+	"habilitacaoCargoOuPos": "Expressao - Expressão: cargoDeDirecao || posGraduando ? VI : false",
+	"habilitado": "Expressao - Expressão: habilitacaoParcial || habilitacaoEstagio || habilitacaoCargoOuPos",
+	"somaEnsino": "Somatorio - Expressão: I",
+	"somaPesquisa": "Somatorio - Expressão: III",
+	"somaAdministracao": "Somatorio - Expressão: IV",
+	"somaOutras": "Somatorio - Expressão: V",
+	"S": "Expressao - Expressão:somaEnsino + somaPesquisa + somaAdministracao + somaOutras"
+
 }
