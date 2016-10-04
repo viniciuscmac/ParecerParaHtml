@@ -2,6 +2,7 @@
 var obj = new json();
 obj.resgatarJson();
 
+
 // Classe para chamar o Json.
 function json(){
 	var qtd;
@@ -14,30 +15,37 @@ function json(){
 		// Estrutura de resultado.
 		$.getJSON('arquivo.json', function(data){
 			this.qtd = data.length;
-			this.retorno = '';
-			this.retorno += 'ID: ' + data.id + '<br /><br />';						
-			this.retorno +='(Art. 39) Total de meses: ' +data.totalMeses + '<br /><br />';
-			this.retorno +='(Art. 39) Verifica numero de meses: ' +data.meses24 + '<br /><br />';
-			this.retorno +='(Art. 39) Somatório ponderado: ' +data.somaPonderada + '<br /><br />';
-			this.retorno +='(Art. 39) Nota final: ' +data.notaFinal + '<br /><br />';
-			this.retorno +='Inciso I (Art. 40): ' +data.inciso1 + '<br /><br />';
-			this.retorno +='Inciso II (Art. 40): ' +data.inciso2 + '<br /><br />';
-			this.retorno +='Inciso III (Art. 40): ' +data.inciso3 + '<br /><br />';
-			this.retorno +='Inciso IV (Art. 40): ' +data.inciso4 + '<br /><br />';
-			this.retorno +='Inciso V (Art. 40): ' +data.aprovadoChefia + '<br /><br />';
-			this.retorno +='Inciso VI (Art. 40): ' +data.inciso6 + '<br /><br />';
-			this.retorno +='Habilitação parcial (Art. 40): ' +data.habilitacaoParcial + '<br /><br />';
-			this.retorno +='Habilitação para caso especial de estágio (Art. 40, parágrafo primeiro): ' 
-			+data.habilitacaoEstagio + '<br /><br />';
-			this.retorno +='Habilitação para caso especial de cargo de direção ou pós-graduação (Art. 40 parágrafo segundo): ' 
-			+data.habilitacaoCargoOuPos + '<br /><br />';
-			this.retorno +='Habilitado para a promoção: ' +data.habilitado + '<br /><br />';
-			this.retorno +='Soma de ensino: ' +data.somaEnsino + '<br /><br />';
-			this.retorno +='Soma pesquisa e extensão: ' +data.somaPesquisa + '<br /><br />';
-			this.retorno +='Soma administração e representação: ' +data.somaAdministrcao + '<br /><br />';
-			this.retorno +='Soma outras: ' +data.somaOutras + '<br /><br />';
-			this.retorno +='Soma de todos os pontos exceto aqueles de produção intelectual: ' 
-			+data.S + '<br />';
+			this.retorno = '<table align="center"><tr> <th>Atributo</th> <th>Resultado</th></tr>';
+			this.retorno += '<tr><td>ID: </td><td>' + data.id + '</td></tr>';						
+			this.retorno +='<tr><td>(Art. 39) Total de meses: </td><td>' +data.totalMeses + '</td></tr>';
+			this.retorno +='<tr><td>(Art. 39) Verifica numero de meses: </td><td>' +data.meses24 + '</td></tr>';
+			this.retorno +='<tr><td>(Art. 39) Somatório ponderado: </td><td>' +data.somaPonderada + '</td></tr>';
+			this.retorno +='<tr><td>(Art. 39) Nota final: </td><td>' +data.notaFinal + '</td></tr>';
+			this.retorno +='<tr><td>Inciso I (Art. 40): </td><td>' +data.inciso1 + '</td></tr>';
+			this.retorno +='<tr><td>Inciso II (Art. 40): </td><td>' +data.inciso2 + '</td></tr>';
+			this.retorno +='<tr><td>Inciso III (Art. 40): </td><td>' +data.inciso3 + '</td></tr>';
+			this.retorno +='<tr><td>Inciso IV (Art. 40): </td><td>' +data.inciso4 + '</td></tr>';
+			this.retorno +='<tr><td>Inciso V (Art. 40): </td><td>' +data.aprovadoChefia + '</td></tr>';
+			this.retorno +='<tr><td>Inciso VI (Art. 40): </td><td>' +data.inciso6 + '</td></tr>';
+			this.retorno +='<tr><td>Habilitação parcial (Art. 40): </td><td>' +data.habilitacaoParcial + '</td></tr>';
+			this.retorno +='<tr><td>Habilitação para caso especial de estágio (Art. 40, parágrafo primeiro): </td><td>' 
+			+data.habilitacaoEstagio + '</td></tr>';
+			this.retorno +='<tr><td>Habilitação para caso especial de cargo de direção ou pós-graduação (Art. 40 parágrafo segundo): </td><td>' 
+			+data.habilitacaoCargoOuPos + '</td></tr>';
+			
+			if (data.habilitado == "sim"){
+			this.retorno +='<tr><td>Habilitado para a promoção: </td><td>' +data.habilitado + ' PARABENS!!!</td></tr>';
+			}
+			else{
+			this.retorno +='<tr><td>Habilitado para a promoção: </td><td>' +data.habilitado + '</td></tr>';
+			}
+			
+			this.retorno +='<tr><td>Soma de ensino: </td><td>' +data.somaEnsino + '</td></tr>';
+			this.retorno +='<tr><td>Soma pesquisa e extensão: </td><td>' +data.somaPesquisa + '</td></tr>';
+			this.retorno +='<tr><td>Soma administração e representação: </td><td>' +data.somaAdministracao + '</td></tr>';
+			this.retorno +='<tr><td>Soma outras: </td><td>' +data.somaOutras + '</td></tr>';
+			this.retorno +='<tr><td>Soma de todos os pontos exceto aqueles de produção intelectual: </td><td>' 
+			+data.S + '</td></tr></table>';
 	
 			/*for (i = 0; i < this.qtd; i++){
 				//this.retorno += data.parecer[i] + '<br />';
