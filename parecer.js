@@ -10,7 +10,7 @@ function json(){
 
 	// Resgatar valores.
 	json.prototype.resgatarJson = function(){
-		$('#resultado').html('Carregando dados...');
+		//$('#resultado').html('Carregando dados...');
 
 		// Estrutura de resultado.
 		$.getJSON('arquivo.json', function(data){
