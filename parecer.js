@@ -15,7 +15,7 @@ function json(){
 		// Estrutura de resultado.
 		$.getJSON('arquivo.json', function(data){
 			this.qtd = data.length;
-			this.retorno = '<table align="center"><tr> <th>Atributo</th> <th>Resultado</th></tr>';
+			this.retorno = '<table align="center" class="table table-bordered table-striped table-hover"><tr> <th>Atributo</th> <th>Resultado</th></tr>';
 			this.retorno += '<tr><td>ID: </td><td>' + data.id + '</td></tr>';
 			this.retorno +='<tr><td>(Art. 39) Total de meses: </td><td>' +data.totalMeses + '</td></tr>';
 			this.retorno +='<tr><td>(Art. 39) Verifica numero de meses: </td><td>' +data.meses24 + '</td></tr>';
