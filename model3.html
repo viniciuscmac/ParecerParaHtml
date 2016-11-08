@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo 3 - SAEP - Template</title>
+    <style type="text/css">
+    tab1 { padding-left: 4em; }
+    shadow {
+      width: 1150px;
+      background-color: #e6e6e6;}
+    div.container{
+      border: 1px solid black;
+      max-width: 1150px;
+      margin: auto;
+
+    }
+    </style>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="modelo1.css" />
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.3.2", {uncompressed:true});
+    </script>
+</head>
+<body>
+    <div class="container">
+      <br><br>
+      <center>
+      <table border="2px solid black"><tr><td><img src="brasil.png" width="55" height="55"><tab1><tab1>Universidade Federal De Goiás <tab1><br><tab1><tab1>Sistema de Apoio à Elaboração de Parecer<tab1></td>
+        <td><font size="5"><tab1><tab1>Parecer de Avaliação Final<tab1><tab1></font></td>
+        <tr></table></center>
+        <div id="resultado">
+            <script type="text/javascript" src="parecer3.js">
+</script>
+        </div>
+        <center>  <button onclick="goBack()">Voltar</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+    </div>
+</body>
+</html>
