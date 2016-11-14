@@ -17,6 +17,10 @@
 
     }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="modelo1.css" />
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
@@ -27,14 +31,17 @@
 <body>
     <div class="container">
       <br><br>
+      <div class="table-responsive">
       <center>
       <table border="2px solid black"><tr><td><img src="brasil.png" width="55" height="55"><tab1><tab1>Universidade Federal De Goiás <tab1><br><tab1><tab1>Sistema de Apoio à Elaboração de Parecer<tab1></td>
         <td><font size="5"><tab1><tab1>Parecer de Avaliação Final<tab1><tab1></font></td>
-        <tr></table></center>
-        <div id="resultado">
+        <tr></table></center></div>
+      <div class="row">
+        <div id="resultado" >
             <script type="text/javascript" src="parecer3.js">
 </script>
         </div>
+      </div>
         <center>  <button onclick="goBack()">Voltar</button>
 <script>
 function goBack() {
